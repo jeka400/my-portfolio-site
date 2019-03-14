@@ -4,13 +4,25 @@
         padding: 50px 0 !important;
     }
 
-    .intro-text > div > div > h1 {
-        font-size: 38px;
-        margin-bottom: 15px;
+    .intro-text {
+        > div {
+            > div {
+                > h1 {
+                    font-size: 38px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
     }
 
-    .intro-text > div > div > h4 {
-        font-size: 21px;
+    .intro-text {
+        > div {
+            > div {
+                > h4 {
+                    font-size: 21px;
+                }
+            }
+        }
     }
 
     .about-info >h4 {
@@ -20,8 +32,14 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-    .intro-text > div > div > h1 {
-        font-size: 60px;
+    .intro-text {
+        > div {
+            > div {
+                > h1 {
+                    font-size: 60px;
+                }
+            }
+        }
     }
 
     .about-info >h4 {
