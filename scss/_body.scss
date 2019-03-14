@@ -1,0 +1,47 @@
+.hidden {
+    display: none !important;
+}
+
+section {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+.section-title {
+    font-size: 30px;
+    color: $main-font-color;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 0.8;
+    font-weight: 100;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+body {
+    background: $main-color;
+}
+
+a {
+    &:visited { 
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        outline: 0;
+    }
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        border: 1px solid white;
+        background-color: transparent;
+        outline: 0;
+     }
+    &:active {
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        outline: 0;
+     }
+  }

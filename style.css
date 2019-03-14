@@ -72,11 +72,20 @@ body {
     background: var(--main-color);
 }
 
-a:hover,
+a:visited,
 a:active {
     text-decoration: none;
     cursor: pointer;
     color: white;
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
     outline: 0;
 }
 

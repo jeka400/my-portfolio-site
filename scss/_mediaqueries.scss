@@ -1,0 +1,59 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    section {
+        padding: 50px 0 !important;
+    }
+
+    .intro-text > div > div > h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .intro-text > div > div > h4 {
+        font-size: 21px;
+    }
+
+    .about-info >h4 {
+        margin-top: 50px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .intro-text > div > div > h1 {
+        font-size: 60px;
+    }
+
+    .about-info >h4 {
+        margin-top: 50px;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .panel {
+        height: auto;
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+    }
+
+    .nav-item {
+        height: 50px;
+        line-height: 55px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    .collapse-list {
+        height: 400px;
+    }
+}

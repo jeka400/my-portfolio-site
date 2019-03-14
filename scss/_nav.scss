@@ -1,0 +1,113 @@
+/*  ====================================================        Nav Btns       ======================================================== */
+.navigation {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 10000;
+}
+
+.toggler-btn {
+    width: 80px;
+    height: 100%;
+    background-color: $main-font-color;
+    padding-top: 17px;
+    padding-left: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+}
+
+.navBar-inner {
+    position: relative;
+    width: 30px;
+    height: 31px;
+    padding-top: 14px;
+    cursor: pointer;
+    display: block;
+}
+
+.bar-inner {
+    width: 20px;
+    height: 3px;
+    background-color: $secondary-color;
+}
+
+.bar-inner {
+    &:before {
+        top: 0;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: $secondary-color;
+        left: 0;
+    }
+}
+
+.bar-inner {
+    &:after {
+        bottom: 0;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 3px;
+        background:$secondary-color;
+        left: 0;
+    }
+}
+
+/*  =================================================        Nav Collapse        ======================================================== */
+.collapse-list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 600px;
+    width: 100%;
+    background: $heading-color;
+}
+
+.collapse-list {
+    > ul {
+        top: 75px;
+        position: relative;
+        padding-bottom: 20px;
+    }
+}
+
+.nav-item {
+    line-height: 45px;
+    height: 45px;
+    display: block;
+    text-align: center;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0;
+    font-weight: 500;
+    color: $main-font-color;
+    display: inline-block;
+}
+
+.nav-item.active {
+    > a {
+        &:before {
+            content: '';
+            background-color: $secondary-color;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: absolute;
+            top: 49%;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            z-index: -3;
+        }
+    }
+}
