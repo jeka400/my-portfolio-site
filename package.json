@@ -1,0 +1,23 @@
+{
+  "name": "myportfoliosite",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-scrollify": "^1.0.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeka400/my-portfolio-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeka400/my-portfolio-site/issues"
+  },
+  "homepage": "https://github.com/jeka400/my-portfolio-site#readme"
+}
