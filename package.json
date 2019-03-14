@@ -4,11 +4,13 @@
   "description": "My portfolio site",
   "dependencies": {
     "jquery": "^3.3.1",
-    "jquery-scrollify": "^1.0.19"
+    "jquery-scrollify": "^1.0.19",
+    "stylelint": "^9.10.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylelint": "stylelint '**/*.scss'"
   },
   "repository": {
     "type": "git",
