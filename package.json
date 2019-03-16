@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "My portfolio site",
   "dependencies": {
+    "gulp-clean-css": "^4.0.0",
+    "gulp-sass": "^4.0.2",
     "jquery": "^3.3.1",
     "jquery-scrollify": "^1.0.19",
     "stylelint": "^9.10.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "stylelint": "stylelint '**/*.scss'"
