@@ -1,30 +1,24 @@
-/*  ===========================================     Preloader           =========================================================   */
-#preloader {
-    display: grid;
-    align-items: center;
-    background: var(--secondary-color);
-    z-index: 200000;
+/*  ===========================================     Preloader            =========================================================   */
+.circle {
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -moz-animation: move 2s infinite;
+    -o-animation: move 2s infinite;
+    -webkit-animation: move 2s infinite;
 }
-@-moz-keyframes rotate {
-    to {
-      -moz-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
+@keyframes move {
+    0% {left: 0;}
+    50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    100% {right: 100%;}
 }
-@-webkit-keyframes rotate {
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@keyframes rotate {
-    to {
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+@-webkit-keyframes move {
+    0% {left: 0;}
+    50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    100% {right: 100%;}
+} 
 
 /*  ===========================================     Nav animation       =========================================================   */
 .animate-nav {
