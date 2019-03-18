@@ -6,7 +6,7 @@ let cleanCSS = require('gulp-clean-css');
 
 //compile
 gulp.task('sass', () => {
-    gulp.src('styles/scss-styles/style.scss')
+    gulp.src(['scss/style.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'));
 });
@@ -22,10 +22,10 @@ gulp.task('minify-css', () => {
    .pipe(gulp.dest('dist/cssMin'));
 });
 
-gulp.task('sass:watch', () => {
-    gulp.watch('styles/scss-style/style.scss', (event) => {
-        gulp.run('sass');
-    });
-})
+// gulp.task('sass:watch', () => {
+//     gulp.watch('scss/style.scss', (event) => {
+//         gulp.run('sass');
+//     });
+// });
 
-gulp.task( 'default', [ 'sass' ] )
+gulp.task( 'default', [ 'sass', 'minify-css' ] )

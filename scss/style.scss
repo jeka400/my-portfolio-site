@@ -1,21 +1,20 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+/** 
+* General
+**/
+@import './_colors';
+@import './_general';
+@import './_fonts';
+@import './_animations';
 
 /**
-*   Preloader
+* Preloader
 **/
 @import './_preloader';
 
 
 /** 
-*    General
-**/
-@import './_general';
-@import './_colors';
-@import './_fonts';
-@import './_animations';
-
-
-/** 
-*    Sections
+* Sections
 **/
 @import './_nav';
 @import './_intro';

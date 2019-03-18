@@ -29,6 +29,15 @@ a {
         cursor: pointer;
         color: white;
         outline: 0;
+        border: none !important;
+    }
+   
+    &:active {
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        outline: 0;
+        border: none !important;
     }
     &:hover {
         text-decoration: none;
@@ -37,11 +46,5 @@ a {
         border: 1px solid white;
         background-color: transparent;
         outline: 0;
-     }
-    &:active {
-        text-decoration: none;
-        cursor: pointer;
-        color: white;
-        outline: 0;
-     }
+    }
   }

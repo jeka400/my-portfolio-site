@@ -101,9 +101,9 @@ body {
     background: var(--main-color);
 }
 
-a:visited,
-a:active {
+a:visited {
     text-decoration: none;
+    border: none !important;
     cursor: pointer;
     color: white;
     outline: 0;
@@ -115,6 +115,13 @@ a:hover {
     color: white;
     border: 1px solid white;
     background-color: transparent;
+    outline: 0;
+}
+a:active {
+    text-decoration: none;
+    border: none !important;
+    cursor: pointer;
+    color: white;
     outline: 0;
 }
 
@@ -229,7 +236,7 @@ a:hover {
     background-color: var(--main-color);
     display: flex;
     align-items: center;
-    background-image: url('./img/intro.jpg');
+    background-image: url('./img/intro-pic.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -591,7 +598,7 @@ a:hover {
 #cv {
    padding: 100px 0;
    background: var(--main-color);
-   background-image: url('./img/abstract-art-artistic-1851447.jpg');
+   background-image: url('./img/computer-desk-electronics-238118.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
