@@ -18,7 +18,7 @@ footer {
     font-size: 30px;
     height: 80px;
     width: 50px;
-    left: 49%;
+    left: 49% !important;
     margin-top: -25px;
     background-color: $secondary-color;
     text-align: center;
@@ -27,6 +27,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.top-link {
+    > i {
+        &:before {
+            margin-left: -2px;
+        }
+    }
 }
 
 .copyright {

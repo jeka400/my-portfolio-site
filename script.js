@@ -48,10 +48,18 @@ $(document).ready(function() {
         setTimeout(
             function() 
             {
-                
                 $(".bar-inner").addClass("animate-nav-close");
             }, 10);
-        
+    });
+
+    $(".nav-link").on("click", function(e) {
+      $(".nav-item").removeClass("active");
+      $(this).parent().addClass("active");
+      setTimeout(
+          function() 
+          {
+            $(".collapse-list").addClass("hidden");
+          }, 200);
     });
 
     // ==========================================     Intro - Text effect       ======================================================
@@ -299,21 +307,21 @@ $(document).ready(function() {
 
 
         //   for social icons in footer
-          var toggleElement1 = function() {
-            for (var i = 0; i < si1.length; i++) {
-              if (checkVisibility(si1[i])) {
-                si1[i].classList.add('animate-3');
-                si2[i].classList.add('animate-4');
-                si3[i].classList.add('animate-5');
-                si4[i].classList.add('animate-6');
-              } else {
-                si1[i].classList.remove('animate-3');
-                si2[i].classList.remove('animate-4');
-                si3[i].classList.remove('animate-5');
-                si4[i].classList.remove('animate-6');
-              }
-            }
-          };
+          // var toggleElement1 = function() {
+          //   for (var i = 0; i < si1.length; i++) {
+          //     if (checkVisibility(si1[i])) {
+          //       si1[i].classList.add('animate-3');
+          //       si2[i].classList.add('animate-4');
+          //       si3[i].classList.add('animate-5');
+          //       si4[i].classList.add('animate-6');
+          //     } else {
+          //       si1[i].classList.remove('animate-3');
+          //       si2[i].classList.remove('animate-4');
+          //       si3[i].classList.remove('animate-5');
+          //       si4[i].classList.remove('animate-6');
+          //     }
+          //   }
+          // };
 
           var toggleElement2 = function() {
             for (var i = 0; i < revealer.length; i++) {
@@ -329,13 +337,13 @@ $(document).ready(function() {
           // Throttle events and requestAnimationFrame
           var scrollHandler = throttle(function() {
             _requestAnimationFrame(toggleElement);
-            _requestAnimationFrame(toggleElement1);
+            // _requestAnimationFrame(toggleElement1);
             _requestAnimationFrame(toggleElement2);
           }, 300);
       
           var resizeHandler = throttle(function() {
             _requestAnimationFrame(toggleElement);
-            _requestAnimationFrame(toggleElement1);
+            // _requestAnimationFrame(toggleElement1);
             _requestAnimationFrame(toggleElement2);
       
             // For demo purposes only

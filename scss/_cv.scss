@@ -1,9 +1,17 @@
 #cv {
     padding: 100px 0;
-    background: $main-color;
-    background-image: url('../img/cv.jpg');
+    background-image: url('../../img/cv.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+ }
+
+ #cv {
+     & > .wrapper {
+        background-color: rgba(0,0,0,.8);
+     }
+
+    display: flex;
+    align-items: center;
  }

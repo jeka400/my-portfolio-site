@@ -1,18 +1,18 @@
 .pageloader.wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background: var(--third-color);
-    z-index: 9999999;
+    background: $third-color;
+    z-index: 1000;
     display: grid;
     align-items: center;
 }
 
 #preloader {
+    z-index: 1000;
     display: grid;
     align-items: center;
-    background: var(--third-color);
-    z-index: 200000;
+    background: $third-color;
     color: white;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -44,7 +44,7 @@
         top: -25px;
         right: -85px;
         text-transform: uppercase;
-        color: var(--third-color);
+        color: $third-color;
         font-family: helvetica, sans-serif;
         font-weight: bold;
     }

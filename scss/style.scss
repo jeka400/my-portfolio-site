@@ -1,4 +1,9 @@
+/** 
+* Bootstrap
+**/
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+
 /** 
 * General
 **/
@@ -6,6 +11,7 @@
 @import './_general';
 @import './_fonts';
 @import './_animations';
+
 
 /**
 * Preloader
@@ -25,4 +31,9 @@
 @import './_cv';
 @import './_contact';
 @import './_footer';
+
+
+/** 
+* Media query
+**/
 @import './_mediaqueries';
