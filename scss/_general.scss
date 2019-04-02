@@ -5,7 +5,8 @@
 section {
     width: 100%;
     position: relative;
-    height: 100vh;
+    height: auto;
+   
 }
 
 .section-title {
@@ -13,7 +14,7 @@ section {
     color: $main-font-color;
     text-transform: capitalize;
     letter-spacing: 1px;
-    line-height: 0.8;
+    line-height: 1.5em;
     font-weight: 100;
     position: relative;
     margin-bottom: 100px;
@@ -25,20 +26,15 @@ body {
 
 a {
     &:visited { 
-        text-decoration: none;
-        cursor: pointer;
-        color: white;
-        outline: 0;
-        border: none !important;
+        &:not(.top-link) {
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            outline: 0;
+            border: none !important;
+        }
     }
-   
-    &:active {
-        text-decoration: none;
-        cursor: pointer;
-        color: white;
-        outline: 0;
-        border: none !important;
-    }
+
     &:hover {
         text-decoration: none;
         cursor: pointer;
@@ -50,4 +46,15 @@ a {
             background-color: transparent;
         }
     }
+   
+    &:active {
+        &:not(.top-link) {
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            outline: 0;
+            border: none !important;
+        }
+    }
+   
   }

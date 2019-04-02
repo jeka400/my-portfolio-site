@@ -22,10 +22,10 @@ gulp.task('minify-css', () => {
    .pipe(gulp.dest('dist/cssMin'));
 });
 
-gulp.task('sass:watch', () => {
-    gulp.watch('scss/style.scss', (event) => {
-        gulp.run('sass');
-    });
-});
+// gulp.task('sass:watch', () => {
+//     gulp.watch('scss/style.scss', (event) => {
+//         gulp.run('sass');
+//     });
+// });
 
 gulp.task( 'default', [ 'sass', 'minify-css' ] )

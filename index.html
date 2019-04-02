@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jelena Krstic </title>
+    <title>Jelena Krstic</title>
+
+    <meta property="og:title" content="Jelena Krstic" />
+    <meta property="og:site_name" content="Jelena Krstic" />
+    <meta property="og:descrtiption" content="Portfolio site for frontend web developer Jelena Krstic" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:url" content="http://jelena-krstic.com/" />
+    <meta property="og:image" content="http://jelena-krstic.com/img/about.jpg" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Jelena Krstic">
+    <meta name="keywords" content="html, html5, css3, css, web, website, site, jelena krstic,
+                                     git, sass, scss, bootstrap, frontend, developer, portfolio, 
+                                     javascript, jquery">
+    <meta name="description" content="The home page of Jelena Krstic, frontend developer.">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-config" content="browserconfig.xml">
+
+    <link rel="stylesheet" href="dist/cssMin/style.css">
+
+    <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
+    <link rel="apple-touch-icon" href="./img/letter.png"/>
 
     <link rel="icon" type="image/jpg"  sizes="30x30" href="./img/letter.png" />
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
@@ -15,8 +38,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="dist/cssMin/style.css">
+    <!-- <link rel="stylesheet" href="animations.css"> -->
+    
     
   </head>
   <body>
@@ -32,7 +55,7 @@
 
     <!-- ====================================================     Nav         ========================================================-->
     <nav class="navigation">
-        <div class="toggler-btn" type="button">
+        <div class="toggler-btn" >
             <div class="navBar-inner">
                 <div class="bar-inner"></div>
             </div>
@@ -95,13 +118,18 @@
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-5 col-lg-4">
                                 <div class="about-img">
-                                    <img src="./img/about.jpg" alt="">
+                                    <img src="./img/about.jpg" alt="Jelena Krstic" title="Jelena Krstic Image">
                                 </div>
                             </div>
                             <div class="col-md-7 col-lg-6">
                                 <div class="about-info revealer animated">
                                     <h4>About me</h4>
                                     <i class="fas fa-ellipsis-h"></i>
+
+                                    <div class="about-img-small-width">
+                                        <img src="./img/about.jpg" alt="Jelena Krstic" title="Jelena Krstic image">
+                                    </div>
+
                                     <p>
                                         <span class="desc">I am a frontend developer from Niš.</span>
                                         I was born in Kruševac, a smaller but very beautiful city near Niš.
@@ -252,7 +280,7 @@
                     <div class="row work-items">
                         <div class="col-12 col-md-6">
                             <div class="work">
-                                <img src="./img/myko.png" alt="" class="img-fluid">
+                                <img src="./img/myko.png" alt="Myko Minions site image" title="Myko Minions project" class="img-fluid">
                                 <div class="work-info">
                                     <h5 title="Myko Minions">Myko Minions</h5>
                                     <p>July 2018</p>
@@ -264,7 +292,7 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="work">
-                                <img src="./img/english.png" alt="" class="img-fluid">
+                                <img src="./img/english.png" alt="English Department site image" title="English Department project" class="img-fluid">
                                 <div class="work-info">
                                     <h5 title="English Department">English Department</h5>
                                     <p>January 2018</p>
@@ -283,173 +311,177 @@
                 </div>
             </div>
         </div>
+
+
+
+        <!-- ====================================================     Work Popup Myko   ========================================================-->
+    <div class="work-popup popup-myko hidden">
+            <button title="Close" type="button" class="close-btn-popup close-myko">x</button>
+            <div class="popup-content">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-8">
+                            <div class="work-title">
+                                <h4>Myko Minions</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Link</h4>
+                                <p>
+                                    <a href="https://myko-minions.com/" target="_blank" >
+                                        <i class="fas fa-paperclip"></i>
+                                        View Project
+                                    </a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>About Project</h4>
+                                <p>
+                                    Myko Minions is delivery & courier service at Mykonos, 
+                                    that offers the possibility of ordering: food from restaurants, drinks, groceries,
+                                     cigarettes, special gifts for special occasions, courier 
+                                     service or anything that could come on your mind.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Technologies I used</h4>
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>html</h6>
+                                            <p>
+                                                <i class="fab fa-html5"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>css</h6>
+                                            <p>
+                                                <i class="fab fa-css3-alt"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>bootstrap</h6>
+                                            <p>
+                                                <span class="text-uppercase bootstrap-char">B</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>git</h6>
+                                            <p>
+                                                <i class="fas fa-code-branch"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+         <!-- ====================================================     Work Popup English   ========================================================-->
+         <div class="work-popup popup-english hidden">
+            <button title="Close" type="button" class="close-btn-popup close-english">x</button>
+            <div class="popup-content">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-8">
+                            <div class="work-title">
+                                <h4>English Department</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Link</h4>
+                                <p>
+                                    <a href="https://englishdepartment.co.uk/"  target="_blank">
+                                        <i class="fas fa-paperclip"></i>
+                                        View Project
+                                    </a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>About Project</h4>
+                                <p>
+                                    English Departmant is an online platform for English teachers to share
+                                     their thoughts, resources, ideas and jobs posts, all for free.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Technologies I used</h4>
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>html</h6>
+                                            <p>
+                                                <i class="fab fa-html5"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>css</h6>
+                                            <p>
+                                                <i class="fab fa-css3-alt"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>bootstrap</h6>
+                                            <p>
+                                                <span class="text-uppercase bootstrap-char">B</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>git</h6>
+                                            <p>
+                                                <i class="fas fa-code-branch"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- ====================================================     Work Popup Myko   ========================================================-->
-    <div class="work-popup popup-myko hidden">
-        <button title="Close" type="button" class="close-btn-popup close-myko">x</button>
-        <div class="popup-content">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8">
-                        <div class="work-title">
-                            <h4>Myko Minions</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center ">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Link</h4>
-                            <p>
-                                <a href="https://myko-minions.com/" target="_blank" >
-                                    <i class="fas fa-paperclip"></i>
-                                    View Project
-                                </a> 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>About Project</h4>
-                            <p>
-                                Myko Minions is delivery & courier service at Mykonos, 
-                                that offers the possibility of ordering: food from restaurants, drinks, groceries,
-                                 cigarettes, special gifts for special occasions, courier 
-                                 service or anything that could come on your mind.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Technologies I used</h4>
-                            <div class="row justify-content-center text-center">
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>html</h6>
-                                        <p>
-                                            <i class="fab fa-html5"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>css</h6>
-                                        <p>
-                                            <i class="fab fa-css3-alt"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>bootstrap</h6>
-                                        <p>
-                                            <span class="text-uppercase" id="bootstrap-char">B</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>git</h6>
-                                        <p>
-                                            <i class="fas fa-code-branch"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     <!-- ====================================================     Work Popup English   ========================================================-->
-     <div class="work-popup popup-english hidden">
-        <button title="Close" type="button" class="close-btn-popup close-english">x</button>
-        <div class="popup-content">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8">
-                        <div class="work-title">
-                            <h4>English Department</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center ">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Link</h4>
-                            <p>
-                                <a href="https://englishdepartment.co.uk/"  target="_blank">
-                                    <i class="fas fa-paperclip"></i>
-                                    View Project
-                                </a> 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>About Project</h4>
-                            <p>
-                                English Departmant is an online platform for English teachers to share
-                                 their thoughts, resources, ideas and jobs posts, all for free.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Technologies I used</h4>
-                            <div class="row justify-content-center text-center">
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>html</h6>
-                                        <p>
-                                            <i class="fab fa-html5"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>css</h6>
-                                        <p>
-                                            <i class="fab fa-css3-alt"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>bootstrap</h6>
-                                        <p>
-                                            <span class="text-uppercase" id="bootstrap-char">B</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>git</h6>
-                                        <p>
-                                            <i class="fas fa-code-branch"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- ====================================================     Cv            ========================================================-->
      <section id="cv" class="panel" data-section-name="cv">
@@ -495,31 +527,39 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7">
-                    <form id="contact-form" action="#" autocomplete="on">
-                        <div class="row hidden">
+                    <div class=" row form-successsful-message hidden">
+                        <div class="col-12">
+                            <p>Your message has been successfully sent!</p>
+                        </div>
+                    </div>
+
+
+                    <form id="contact-form" action="someformaction.php#contact-form" method="post" autocomplete="on">
+                        <div class="row form-message hidden">
                             <div class="col">
-                                <p class="form-message error">
+                                <p class="error text-left">
                                     Please complete the form and try again.
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-5">
-                                <input class="input-field input-not-empty required" type="text" name="name" placeholder="Name">
-                                <input class="input-field input-is-empty required" type="text" name="name" placeholder="Field is Required!">
-                                <input class="input-field input-not-empty required" type="email" name="email" placeholder="Email">
-                                <input class="input-field input-is-empty required" type="email" name="email" placeholder="Field is Required!">
+                                <input class="input-field input-not-empty not-empty-name required" type="text" name="name" placeholder="Name">
+                                <input class="input-field input-is-empty empty-name hidden required" type="text" name="name" placeholder="Field is Required!">
+                                
+                                <input class="input-field input-not-empty not-empty-email required" type="email" name="email" placeholder="Email">
+                                <input class="input-field input-is-empty empty-email hidden required" type="email" name="email" placeholder="Field is Required!">
                             </div>
                             <div class="col-md-7">
-                                <textarea class="input-field input-not-empty required" type="text" name="email" placeholder="Message"></textarea>
-                                <textarea class="input-field input-is-empty required" type="text" name="email" placeholder="Field is Required!"></textarea>
+                                <textarea class="input-field input-not-empty not-empty-message required"  name="message" placeholder="Message"></textarea>
+                                <textarea class="input-field input-is-empty empty-message hidden required"  name="message" placeholder="Field is Required!"></textarea>
                             </div>
                         </div>
                         <div class="row message-row">
                             <div class="col revealer animated">
-                                <a href="#" title="Download My CV" class="button all-works-link message-btn">
+                                <button title="Send message" class="button all-works-link message-btn" type="submit">
                                       send message
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </form>

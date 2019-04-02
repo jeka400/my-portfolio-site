@@ -1,6 +1,8 @@
 #about {
     background-color: $main-color;
     position: relative;
+    display: -webkit-flex; /* Safari */
+    display: flex;
 }
 
 .about-inner {

@@ -1,32 +1,73 @@
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 
-  $('.pageloader').delay(250).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-  $('body').delay(250).css({'overflow':'visible'});
+  $('.pageloader').delay(200).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(200).css({'overflow':'visible'});
 })
 
 $(document).ready(function() {
-
-    $(function() {
-        $.scrollify({
-            section : ".panel",
-            sectionName : "section-name",
-            interstitialSection : "footer",
-            easing: "easeOutExpo",
-            scrollSpeed: 1100,
-            offset : 0,
-            scrollbars: true,
-            standardScrollElements: "",
-            setHeights: true,
-            overflowScroll: true,
-            updateHash: true,
-            touchScroll:true,
-            before:function() {},
-            after:function() {},
-            afterResize:function() {},
-            afterRender:function() {}
-        });
+  
+  $(function() {
+    $.scrollify({
+        section : ".panel",
+        sectionName : "section-name",
+        interstitialSection : "footer",
+        easing: "easeOutExpo",
+        scrollSpeed: 1100,
+        offset : 0,
+        scrollbars: true,
+        standardScrollElements: "",
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll:true,
+        before:function() {},
+        after:function() {},
+        afterResize:function() {},
+        afterRender:function() {}
     });
-   
+  });
+
+  var width = $(this).width();
+  if(width < 992) {
+    console.log("uslo");
+    $.scrollify.disable();
+  } else {
+    console.log("else tj enejblovan scrolly");
+    $.scrollify.enable();
+  }
+
+
+  // ================================================      Contact form       ===========================================================
+
+  $('.message-btn').on("click", function(e){
+    e.preventDefault();
+
+    if( $('.input-field').val() != "" ) {
+      $('form').addClass('hidden');
+      $('.form-successsful-message').removeClass('hidden');
+    } else {
+        if( $('.input-field').val() == "" ) {
+          $('.form-message').removeClass('hidden');
+        }
+    
+        if( $('.not-empty-name').val() == "" ) {
+          $('.not-empty-name').addClass('hidden');
+          $('.empty-name').removeClass('hidden');
+        }
+    
+        if( $('.not-empty-email').val() == "" ) {
+          $('.not-empty-email').addClass('hidden');
+          $('.empty-email').removeClass('hidden');
+        }
+    
+        if( $('.not-empty-message').val() == "") {
+          $('.not-empty-message').addClass('hidden');
+          $('.empty-message').removeClass('hidden');
+        }
+    }
+  });
+ 
+  
 
     // ================================================      Navbar       ===========================================================
     $(".toggler-btn").on("click", function(e){

@@ -1,6 +1,10 @@
 .work-popup {
     width: 100%;
-    position: fixed;
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:visible;
+    overflow-x:hidden;
     margin: 0 auto;
     z-index: 10000;
     top: 0;
@@ -18,6 +22,7 @@
     width: auto;
     max-width: 1200px;
     margin: 50px auto;
+    height: fit-content;
 }
 
 .work-title {
