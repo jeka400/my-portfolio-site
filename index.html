@@ -534,7 +534,7 @@
                     </div>
 
 
-                    <form id="contact-form" action="someformaction.php#contact-form" method="post" autocomplete="on">
+                    <form id="contact-form"  action="#" method="get" autocomplete="on">
                         <div class="row form-message hidden">
                             <div class="col">
                                 <p class="error text-left">
@@ -544,21 +544,17 @@
                         </div>
                         <div class="row">
                             <div class="col-md-5">
-                                <input class="input-field input-not-empty not-empty-name required" type="text" name="name" placeholder="Name">
-                                <input class="input-field input-is-empty empty-name hidden required" type="text" name="name" placeholder="Field is Required!">
-                                
-                                <input class="input-field input-not-empty not-empty-email required" type="email" name="email" placeholder="Email">
-                                <input class="input-field input-is-empty empty-email hidden required" type="email" name="email" placeholder="Field is Required!">
+                                <input type="text" name="name" placeholder="Name" required class="input-field input-not-empty" >
+                                <input type="email" name="email" placeholder="Email" required class="input-field input-not-empty" >
                             </div>
                             <div class="col-md-7">
-                                <textarea class="input-field input-not-empty not-empty-message required"  name="message" placeholder="Message"></textarea>
-                                <textarea class="input-field input-is-empty empty-message hidden required"  name="message" placeholder="Field is Required!"></textarea>
+                                <textarea name="message" placeholder="Message" required class="input-field input-not-empty"></textarea>
                             </div>
                         </div>
                         <div class="row message-row">
                             <div class="col revealer animated">
-                                <button title="Send message" class="button all-works-link message-btn" type="submit">
-                                      send message
+                                <button title="Send message" class="button all-works-link message-btn" type="submit" id="submit-form">
+                                    send message
                                 </button>
                             </div>
                         </div>

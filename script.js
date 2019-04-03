@@ -4,8 +4,54 @@ $(window).on('load', function() { // makes sure the whole site is loaded
   $('body').delay(200).css({'overflow':'visible'});
 })
 
+
+
+
 $(document).ready(function() {
-  
+
+  // ================================================      Form Submition       ===========================================================
+  var $form = $('form#contact-form'),
+  url = 'https://script.google.com/macros/s/AKfycbyEHXhCk4dsv1Ak6oMZDCR6dM-dZenLCRjvB51whLK4rXWh2NxT/exec'
+
+  $('#submit-form').on('click', function(e) {
+    e.preventDefault();
+
+    var formIsValid = true;
+
+    $('.input-field').each(function() {
+      console.log($(this).val());
+      if ( $(this).val() === "" ) {     
+        formIsValid = false;
+        console.log("this mi je ovde: " + this);
+        $(this).addClass('input-is-empty');
+        $('.form-message').removeClass('hidden');
+      }
+    });
+
+    if (formIsValid) {
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serialize()
+      }).success(
+        $('form').addClass('hidden'),
+        $('.form-successsful-message').removeClass('hidden')
+      );
+    } else {
+        $('.form-message').removeClass('hidden');
+
+        $('.input-field').each(function() {
+          if( $(this).val() != "" ) { 
+            $(this).addClass('input-is-empty');
+          }
+        })
+      }
+    
+  });
+
+
+  // ================================================      Scrollyfy       ===========================================================
   $(function() {
     $.scrollify({
         section : ".panel",
@@ -29,44 +75,10 @@ $(document).ready(function() {
 
   var width = $(this).width();
   if(width < 992) {
-    console.log("uslo");
     $.scrollify.disable();
   } else {
-    console.log("else tj enejblovan scrolly");
     $.scrollify.enable();
   }
-
-
-  // ================================================      Contact form       ===========================================================
-
-  $('.message-btn').on("click", function(e){
-    e.preventDefault();
-
-    if( $('.input-field').val() != "" ) {
-      $('form').addClass('hidden');
-      $('.form-successsful-message').removeClass('hidden');
-    } else {
-        if( $('.input-field').val() == "" ) {
-          $('.form-message').removeClass('hidden');
-        }
-    
-        if( $('.not-empty-name').val() == "" ) {
-          $('.not-empty-name').addClass('hidden');
-          $('.empty-name').removeClass('hidden');
-        }
-    
-        if( $('.not-empty-email').val() == "" ) {
-          $('.not-empty-email').addClass('hidden');
-          $('.empty-email').removeClass('hidden');
-        }
-    
-        if( $('.not-empty-message').val() == "") {
-          $('.not-empty-message').addClass('hidden');
-          $('.empty-message').removeClass('hidden');
-        }
-    }
-  });
- 
   
 
     // ================================================      Navbar       ===========================================================
