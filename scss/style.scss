@@ -7,33 +7,33 @@
 /** 
 * General
 **/
-@import './_colors';
-@import './_general';
-@import './_fonts';
-@import './_animations';
+@import './colors';
+@import './general';
+@import './fonts';
+@import './animations';
 
 
 /**
 * Preloader
 **/
-@import './_preloader';
+@import './preloader';
 
 
 /** 
 * Sections
 **/
-@import './_nav';
-@import './_intro';
-@import './_about';
-@import './_skills';
-@import './_works';
-@import './_popup';
-@import './_cv';
-@import './_contact';
-@import './_footer';
+@import './nav';
+@import './intro';
+@import './about';
+@import './skills';
+@import './works';
+@import './popup';
+@import './cv';
+@import './contact';
+@import './footer';
 
 
 /** 
 * Media query
 **/
-@import './_mediaqueries';
+@import './mediaqueries';
