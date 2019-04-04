@@ -1,0 +1,39 @@
+/** 
+* Bootstrap
+**/
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+/** 
+* General
+**/
+@import './_colors';
+@import './_general';
+@import './_fonts';
+@import './_animations';
+
+
+/**
+* Preloader
+**/
+@import './_preloader';
+
+
+/** 
+* Sections
+**/
+@import './_nav';
+@import './_intro';
+@import './_about';
+@import './_skills';
+@import './_works';
+@import './_popup';
+@import './_cv';
+@import './_contact';
+@import './_footer';
+
+
+/** 
+* Media query
+**/
+@import './_mediaqueries';

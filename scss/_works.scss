@@ -1,0 +1,99 @@
+#works {
+    > .container {
+        background-color: $third-color;
+        padding: 100px 15px;
+        border-radius: 5px;
+        position: relative;
+    }
+}
+
+.work-items {
+    position: relative;
+}
+
+.work {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.work-info {
+    padding: 20px;
+    padding-left: 40px;
+    position: relative;
+    text-align: left;
+    background-color: $main-font-color;
+    margin-left: 40px;
+}
+
+.work-info {
+    > h5 {
+        font-size: 17px;
+        font-weight: 600;
+        color: $heading-color;
+        text-overflow: ellipsis;
+    }
+}
+
+.work-info {
+    > p {
+        color: $heading-color;
+        font-size: 15px;
+        margin-top: 5px;
+        font-weight: 600;
+        padding-left: 30px;
+        position: relative;
+    }
+}
+
+.work-info {
+    > p {
+        &:before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 20px;
+            top: 49%;
+            left: 0;
+            background-color: $heading-color;
+        }
+    }
+}
+
+.popup-link {
+    font-size: 24px;
+    color: $main-font-color;
+    background: $third-color;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -22px;
+    margin-top: -22px;
+    top: 50%;
+}
+
+.all-works-link {
+    padding: 8px 25px;
+    color: $main-font-color;
+    background-color: $secondary-color;
+    margin-top: 30px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.all-works-link {
+    &:hover {
+        color: $main-font-color;
+        border: 1px solid $main-font-color;
+        background-color: transparent;
+    }
+}

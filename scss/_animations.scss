@@ -1,11 +1,11 @@
-/*  ===========================================     Preloader            =========================================================   */
+/*  ===========================================     Preloader           =========================================================   */
 .circle {
     animation-name: move;
-    animation-duration: 2s;
+    animation-duration: 1.3s;
     animation-iteration-count: infinite;
-    -moz-animation: move 2s infinite;
-    -o-animation: move 2s infinite;
-    -webkit-animation: move 2s infinite;
+    -moz-animation: move 1.3s infinite;
+    -o-animation: move 1.3s infinite;
+    -webkit-animation: move 1.3s infinite;
 }
 @keyframes move {
     0% {left: 0;}

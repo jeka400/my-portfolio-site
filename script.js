@@ -1,28 +1,81 @@
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('.pageloader').delay(200).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(200).css({'overflow':'visible'});
+})
 
 
 $(document).ready(function() {
 
-    $(function() {
-        $.scrollify({
-            section : ".panel",
-            sectionName : "section-name",
-            interstitialSection : "footer",
-            easing: "easeOutExpo",
-            scrollSpeed: 1100,
-            offset : 0,
-            scrollbars: true,
-            standardScrollElements: "",
-            setHeights: true,
-            overflowScroll: true,
-            updateHash: true,
-            touchScroll:true,
-            before:function() {},
-            after:function() {},
-            afterResize:function() {},
-            afterRender:function() {}
-        });
+  // ================================================      Form Submition       ===========================================================
+  var $form = $('form#contact-form'),
+  url = 'https://script.google.com/macros/s/AKfycbyEHXhCk4dsv1Ak6oMZDCR6dM-dZenLCRjvB51whLK4rXWh2NxT/exec'
+
+  $('#submit-form').on('click', function(e) {
+    e.preventDefault();
+
+    var formIsValid = true;
+
+    $('.input-field').removeClass("input-is-empty");
+    $('.form-message').addClass('hidden');
+
+    $('.input-field').each(function() {
+      
+
+      if ($(this).val() === "") {     
+        formIsValid = false;
+        $(this).addClass('input-is-empty');
+        
+      }
     });
-   
+
+    if (formIsValid) {
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serialize(),
+        success: function(data) {
+          $('form').addClass('hidden');
+          $('.form-successsful-message').removeClass('hidden')
+        }
+      });
+    } else {
+      $('.form-message').removeClass('hidden');
+    }
+    
+  });
+
+
+  // ================================================      Scrollyfy       ===========================================================
+  $(function() {
+    $.scrollify({
+        section : ".panel",
+        sectionName : "section-name",
+        interstitialSection : "footer",
+        easing: "easeOutExpo",
+        scrollSpeed: 1100,
+        offset : 0,
+        scrollbars: true,
+        standardScrollElements: "",
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll:true,
+        before:function() {},
+        after:function() {},
+        afterResize:function() {},
+        afterRender:function() {}
+    });
+  });
+
+  var width = $(this).width();
+  if(width < 992) {
+    $.scrollify.disable();
+  } else {
+    $.scrollify.enable();
+  }
+  
 
     // ================================================      Navbar       ===========================================================
     $(".toggler-btn").on("click", function(e){
@@ -44,10 +97,33 @@ $(document).ready(function() {
         setTimeout(
             function() 
             {
-                
                 $(".bar-inner").addClass("animate-nav-close");
             }, 10);
-        
+    });
+
+    $(".nav-link").on("click", function(e) {
+      $(".collapse-list").addClass("hidden");
+    });
+
+    $(".nav-item").hover(function(){
+      $(this).toggleClass("active");
+    })
+
+    // ==========================================     Intro - Text effect       ======================================================
+    $('.sectionOneAnimation').each(function(){
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline().add({
+        targets: '.sectionOneAnimation .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 950,
+        delay: function(el, i) {
+            return 70*i;
+        }
     });
 
     // ================================================      Popup       ===========================================================
@@ -278,21 +354,21 @@ $(document).ready(function() {
 
 
         //   for social icons in footer
-          var toggleElement1 = function() {
-            for (var i = 0; i < si1.length; i++) {
-              if (checkVisibility(si1[i])) {
-                si1[i].classList.add('animate-3');
-                si2[i].classList.add('animate-4');
-                si3[i].classList.add('animate-5');
-                si4[i].classList.add('animate-6');
-              } else {
-                si1[i].classList.remove('animate-3');
-                si2[i].classList.remove('animate-4');
-                si3[i].classList.remove('animate-5');
-                si4[i].classList.remove('animate-6');
-              }
-            }
-          };
+          // var toggleElement1 = function() {
+          //   for (var i = 0; i < si1.length; i++) {
+          //     if (checkVisibility(si1[i])) {
+          //       si1[i].classList.add('animate-3');
+          //       si2[i].classList.add('animate-4');
+          //       si3[i].classList.add('animate-5');
+          //       si4[i].classList.add('animate-6');
+          //     } else {
+          //       si1[i].classList.remove('animate-3');
+          //       si2[i].classList.remove('animate-4');
+          //       si3[i].classList.remove('animate-5');
+          //       si4[i].classList.remove('animate-6');
+          //     }
+          //   }
+          // };
 
           var toggleElement2 = function() {
             for (var i = 0; i < revealer.length; i++) {
@@ -308,13 +384,13 @@ $(document).ready(function() {
           // Throttle events and requestAnimationFrame
           var scrollHandler = throttle(function() {
             _requestAnimationFrame(toggleElement);
-            _requestAnimationFrame(toggleElement1);
+            // _requestAnimationFrame(toggleElement1);
             _requestAnimationFrame(toggleElement2);
           }, 300);
       
           var resizeHandler = throttle(function() {
             _requestAnimationFrame(toggleElement);
-            _requestAnimationFrame(toggleElement1);
+            // _requestAnimationFrame(toggleElement1);
             _requestAnimationFrame(toggleElement2);
       
             // For demo purposes only
@@ -350,24 +426,6 @@ $(document).ready(function() {
           return withinViewport;
         
     }());
-
-
-    // Text effect
-    $('.sectionOneAnimation').each(function(){
-        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-    });
-
-    anime.timeline().add({
-        targets: '.sectionOneAnimation .letter',
-        scale: [4,1],
-        opacity: [0,1],
-        translateZ: 0,
-        easing: "easeOutExpo",
-        duration: 950,
-        delay: function(el, i) {
-            return 70*i;
-        }
-    });
 
 })
 

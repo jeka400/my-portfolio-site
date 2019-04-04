@@ -1,0 +1,92 @@
+#contact {
+    > .container {
+        background-color: $third-color;
+        padding: 100px 15px;
+        color: $main-font-color;
+        border-radius: 5px;
+        margin-bottom: 100px;
+    }
+}
+
+.contact-item {
+    margin-bottom: 30px;
+    color: $paragraph-color;
+    text-align: left;
+}
+
+.contact-item {
+    > h5 {
+        color: $main-font-color;
+        margin-bottom: 3px;
+        font-size: 16px;
+        padding-left: 15px;
+        position: relative;
+    }
+}
+
+.contact-item {
+    > h5 {
+        &:before {
+            position: absolute;
+            content: '';
+            height: 7px;
+            width: 7px;
+            left: 0;
+            bottom: 7px;
+            background: $secondary-color;
+        }
+    }
+}
+
+.error {
+    color: $secondary-color;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    border: 1px solid $popup-color;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 30px;
+    padding: 8px 12px;
+    color: $main-font-color;
+}
+
+textarea.input-field {
+    resize: none;
+    height: 120px;
+}
+
+.input-is-empty {
+    border-color: $secondary-color;
+}
+
+.input-is-empty {
+    &::placeholder {
+        color: $secondary-color;
+    }
+}
+
+.input-field {
+    &:focus {
+        border-color: $paragraph-color;
+        outline-color: $paragraph-color;
+    }
+}
+
+.message-btn {
+    margin-top: 0;
+}
+
+.form-successsful-message {
+    & > div {
+        & > p {
+            font-size: 22px;
+            letter-spacing: 1.2px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-weight: 600;
+
+        }
+    }
+}

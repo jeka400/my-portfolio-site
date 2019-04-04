@@ -1,0 +1,111 @@
+.work-popup {
+    width: 100%;
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:visible;
+    overflow-x:hidden;
+    margin: 0 auto;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background: $main-color;
+}
+
+.popup-content {
+    opacity: 0.99;
+    position: relative;
+    background: $third-color;
+    padding: 80px 30px;
+    box-shadow: 0 0 25px $heading-color;
+    border-radius: 3px;
+    width: auto;
+    max-width: 1200px;
+    margin: 50px auto;
+    height: fit-content;
+}
+
+.work-title {
+    margin-bottom: 80px;
+    color: $main-font-color;
+}
+
+.work-title {
+    > h4 {
+        font-size: 35px;
+        font-weight: 700;
+    }
+}
+
+.work-info-popup {
+    margin-bottom: 30px;
+}
+
+.work-info-popup {
+    > h6 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $main-font-color;
+        font-weight: 600;
+        margin-bottom: 3px;
+    }
+}
+
+.work-info-popup {
+    > p {
+        color: $popup-color;
+    }
+}
+
+.work-info-popup {
+    .work-details-popup & {
+        > p {
+            font-size: 40px;
+        }
+    }
+}
+
+.work-details-popup {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: $main-font-color;
+}
+
+.work-details-popup {
+    > h4 {
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+}
+
+.work-img-popup {
+    margin-top: 30px;
+}
+
+.close-btn-popup {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 0;
+    z-index: 10009;
+    box-shadow: none;
+    touch-action: manipulation; 
+    right: 0;   
+    top: 0;
+    overflow: visible;
+    display: block; 
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    color: $main-font-color;
+    font-size: 28px;
+    font-family: 'Arial', 'Baskerville', monospace;
+    opacity: 0.65;
+}
+
+.close-btn-popup {
+    &:hover {
+        opacity: 1;
+    }
+}

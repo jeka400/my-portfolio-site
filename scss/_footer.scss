@@ -1,0 +1,43 @@
+footer {
+    position: relative;
+}
+
+footer {
+    > .container {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center;
+        padding: 80px 15px;
+        background-color: $third-color;
+    }
+}
+
+.top-link {
+    position: absolute;
+    color: $main-font-color;
+    font-size: 30px;
+    height: 80px;
+    width: 50px;
+    left: 49% !important;
+    margin-top: -25px;
+    background-color: $secondary-color;
+    text-align: center;
+    z-index: 10;
+    top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-link {
+    > i {
+        &:before {
+            margin-left: -2px;
+        }
+    }
+}
+
+.copyright {
+    color: $copyright-color;
+    margin-top: 30px;
+}

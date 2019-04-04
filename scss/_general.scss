@@ -1,0 +1,63 @@
+.hidden {
+    display: none !important;
+}
+
+section {
+    width: 100%;
+    position: relative;
+    height: auto;
+   
+}
+
+.section-title {
+    font-size: 30px;
+    color: $main-font-color;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    font-weight: 100;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+body {
+    background: $main-color;
+}
+
+a {
+    &:visited { 
+        &:not(.top-link) {
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            outline: 0;
+            border: none !important;
+        }
+    }
+
+    &:hover {
+        &:not(.popup-link) {
+            background-color: transparent;
+        }
+        &:not(a.nav-link) {
+            border: 1px solid white;
+            
+        }
+
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        outline: 0;
+    }
+   
+    &:active {
+        &:not(.top-link) {
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            outline: 0;
+            border: none !important;
+        }
+    }
+   
+  }

@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jelena Krstic </title>
+    <title>Jelena Krstic</title>
+
+    <meta property="og:title" content="Jelena Krstic" />
+    <meta property="og:site_name" content="Jelena Krstic" />
+    <meta property="og:descrtiption" content="Portfolio site for frontend web developer Jelena Krstic" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:url" content="http://jelena-krstic.com/" />
+    <meta property="og:image" content="http://jelena-krstic.com/img/about.jpg" />
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Jelena Krstic">
+    <meta name="keywords" content="jelena krstic, jelena, front-end, developer, frontend, html, html5, css3, css, web, website, site, freelance,
+                                     git, sass, scss, bootstrap, portfolio, 
+                                     javascript, jquery">
+    <meta name="description" content="The home page of Jelena Krstic, frontend developer.">
 
-    <link rel="icon" type="image/jpg"  sizes="28x28" href="./img/tab.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-config" content="browserconfig.xml">
+
+    <link rel="stylesheet" href="dist/cssMin/style.css">
+
+    <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
+    <link rel="apple-touch-icon" href="./img/letter.png"/>
+
+    <link rel="icon" type="image/jpg"  sizes="30x30" href="./img/letter.png" />
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     
-    <link rel="stylesheet" href="splitting.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="animations.css"> -->
     
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137609232-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137609232-1');
+    </script>
   </head>
   <body>
+    <!-- ====================================================     Page Loader         ========================================================-->
+    <section class="pageloader wrapper">
+        <div id="preloader" class="preloader dark">
+            <div class="preloader-bar">
+                <div class="circle"></div>
+                <p>Welcome!</p>
+            </div>
+        </div>
+    </section>
 
     <!-- ====================================================     Nav         ========================================================-->
     <nav class="navigation">
-        <div class="toggler-btn" type="button">
+        <div class="toggler-btn" >
             <div class="navBar-inner">
                 <div class="bar-inner"></div>
             </div>
@@ -37,15 +75,11 @@
                 <span></span>
             </div>
 
-            <a class="navbar-img" href="#">
-                <img src="./img/intro.jpg" class="brand-img" />
-            </a>
-
             <div class="collapse-list">
                 <button title="Close" type="button" class=" close-btn close-btn-popup">x</button>
 
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#intro">Home</a>
                     </li>
                     <li class="nav-item">
@@ -78,53 +112,9 @@
                     <h5 class="sectionOneAnimation">Hi there, I'm</h5>
                     <h1 class="sectionOneAnimation">Jelena Krstić</h1>
                     <h4 class="sectionOneAnimation">Frontend Developer</h4>
-                    <!-- <h1 class="title-slide-in words chars splitting" data-splitting style="--word-total: 2; --char-total: 12;">
-                        <span class="word" data-word="Jelena" style="--word-index: 0">
-                            <span class="char" data-char="J" style="--char-index: 0">J</span>
-                            <span class="char" data-char="e" style="--char-index: 1">e</span>
-                            <span class="char" data-char="l" style="--char-index: 2">l</span>
-                            <span class="char" data-char="e" style="--char-index: 3">e</span>
-                            <span class="char" data-char="n" style="--char-index: 4">n</span>
-                            <span class="char" data-char="a" style="--char-index: 5">a</span>
-                        </span>
-                        <span class="whitespace">   </span>
-                        <span class="word" data-word="Krstic" style="--word-index: 1">
-                            <span class="char" data-char="K" style="--char-index: 6">K</span>
-                            <span class="char" data-char="r" style="--char-index: 7">r</span>
-                            <span class="char" data-char="s" style="--char-index: 8">s</span>
-                            <span class="char" data-char="t" style="--char-index: 9">t</span>
-                            <span class="char" data-char="i" style="--char-index: 10">i</span>
-                            <span class="char" data-char="ć" style="--char-index: 11">ć</span>
-                        </span>
-                    </h1>
-                    <h4 class="title-slide-in words chars splitting " data-splitting style="--word-total:2; --char-total:17;">
-                        <span class="word" data-word="Frontend" style="--word-index: 0">
-                            <span class="char" data-char="F" style="--char-index: 0">F</span>
-                            <span class="char" data-char="r" style="--char-index: 1">r</span>
-                            <span class="char" data-char="o" style="--char-index: 2">o</span>
-                            <span class="char" data-char="n" style="--char-index: 3">n</span>
-                            <span class="char" data-char="t" style="--char-index: 4">t</span>
-                            <span class="char" data-char="e" style="--char-index: 5">e</span>
-                            <span class="char" data-char="n" style="--char-index: 6">n</span>
-                            <span class="char" data-char="d" style="--char-index: 7">d</span>
-                        </span>
-                        <span class="whitespace"> </span>
-                        <span class="word" data-word="developer" style="--word-index: 1">
-                            <span class="char" data-char="d" style="--char-index: 8">d</span>
-                            <span class="char" data-char="e" style="--char-index: 9">e</span>
-                            <span class="char" data-char="v" style="--char-index: 10">v</span>
-                            <span class="char" data-char="e" style="--char-index: 11">e</span>
-                            <span class="char" data-char="l" style="--char-index: 12">l</span>
-                            <span class="char" data-char="o" style="--char-index: 13">o</span>
-                            <span class="char" data-char="p" style="--char-index: 14">p</span>
-                            <span class="char" data-char="e" style="--char-index: 15">e</span>
-                            <span class="char" data-char="r" style="--char-index: 16">r</span>
-                        </span>
-                    </h4> -->
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-- ====================================================     About         ========================================================-->
@@ -136,47 +126,60 @@
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-5 col-lg-4">
                                 <div class="about-img">
-                                    <img src="./img/about.jpg" alt="">
+                                    <img src="./img/about.jpg" alt="Jelena Krstic" title="Jelena Krstic Image">
                                 </div>
                             </div>
                             <div class="col-md-7 col-lg-6">
                                 <div class="about-info revealer animated">
                                     <h4>About me</h4>
                                     <i class="fas fa-ellipsis-h"></i>
+
+                                    <div class="about-img-small-width">
+                                        <img src="./img/about.jpg" alt="Jelena Krstic" title="Jelena Krstic image">
+                                    </div>
+
                                     <p>
-                                        <span class="desc">I am a frontend developer from Nis.</span>
-                                        I am a communicative and willing to help person.
-                                        During work, I'm very precise, accurate and responsible person.
-                                        I'm willing to make a compromise if the situation requires it.
-                                        Also, I'm very good with organization, task handling, curious and fast leaner, 
+                                        <span class="desc">I am a frontend developer from Niš.</span>
+                                        I was born in Kruševac, a smaller but very beautiful city near Niš.
+                                        There I went to Grammar School, and then I moved to Niš and finished 
+                                        Faculty of Science and Mathematics, Department of Computer Science.
+                                        I have one year of professional experience providing front-end development, 
+                                        producing high-quality responsive websites and exceptional user experience.
+                                        The work I provide is of the highest quality, fully responsive, and tested 
+                                        in a wide range of devices.
+                                        Often front-end development of a website is overlooked, but being the part 
+                                        of your project that combines design, back-end development and the layer that 
+                                        your users interact with, from my experience, it is the most important to get right.
+                                        About myself, I can also say that I'm very good with organization,
+                                        task handling, curious and fast learner, 
                                         extremely motivated to constantly develop my skills and grow professionally.
                                         I love learning new things, implementing new technologies and aware of how much I still 
                                         need to learn so I can upgrade my knowledge and skills.
                                     </p>
                                     <ul class="social">
                                         <li class="si-1">
-                                            <a href="#">
+                                            <a href="https://www.linkedin.com/in/jelena-krstic164/" target="_blank">
                                                 <span class="social-linkedin">
                                                     <i class="fab fa-linkedin-in"></i>
                                                 </span>
                                             </a>
                                         </li>
                                         <li class="si-2">
-                                            <a href="#">
+                                            <a href="https://www.facebook.com/jelena.krstic.164" target="_blank">
                                                 <span class="social-facebook">
                                                     <i class="fab fa-facebook-f"></i>
                                                 </span>
                                             </a>
                                         </li>
                                         <li class="si-3">
-                                            <a href="#">
+                                            <a href="https://www.instagram.com/jeka_krstic/?hl=en" target="_blank">
                                                 <span class="social-instagram">
                                                     <i class="fab fa-instagram"></i>
                                                 </span>
                                             </a>
                                         </li>
                                         <li class="si-4">
-                                            <a href="#">
+                                            <a href="https://github.com/jeka400" target="_blank">
                                                 <span class="social-github">
                                                     <i class="fab fa-github"></i>
                                                 </span>
@@ -203,57 +206,65 @@
 
                     <div class="skills-items">
                         <div class="row">
-                            <div class="col-6 col-lg-4">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="skill si-1 revealer animated">
                                     <i class="fab fa-html5"></i>
                                     <h5>HTML</h5>
                                     <p>
-                                        Molestiae vel eos atque alias recusandae citationem ad mollitia tecto possimus.
+                                        I create responsive websites that allow the user to 
+                                        experience your website in the best and most appropriate way 
+                                        suited to the device they are using.
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="skill si-2 revealer animated">
                                     <i class="fab fa-css3-alt"></i>
                                     <h5>CSS</h5>
                                     <p>
-                                        Molestiae vel eos atque alias recusandae citationem ad mollitia tecto possimus.
+                                        As a Front-end developer, I believe it is important 
+                                        to understand both design and development to achieve 
+                                        a successful user-facing product.
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="skill si-3 revealer animated">
                                     <i class="fab fa-sass"></i>
                                     <h5>Sass</h5>
                                     <p>
-                                        Molestiae vel eos atque alias recusandae citationem ad mollitia tecto possimus.
+                                        My front-end build process involves the use of tools 
+                                        such as Sass, Gulp, and NPM to speed up development.
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4">
+                        
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="skill si-1 revealer animated">
                                         <i class="fas fa-code-branch"></i>
                                     <h5>Git</h5>
                                     <p>
-                                        Molestiae vel eos atque alias recusandae citationem ad mollitia tecto possimus.
+                                        I can quickly and efficiently join your team using 
+                                         methods and tools such as Git using Github or Bitbucket.
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="skill si-2 revealer animated">
                                         <i class="fab fa-js"></i>
-                                    <h5>jQuery</h5>
+                                    <h5>JavaScript</h5>
                                     <p>
-                                        Molestiae vel eos atque alias recusandae citationem ad mollitia tecto possimus.
+                                        With JavaScript I bringing ideas to life in the browser.
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-12 col-md-6 col-lg-4">
                                 <div class="skill si-3 revealer animated">
                                     <span class="text-uppercase" style="color: white;" id="bootstrap-char">B</span>
                                     <h5>Bootstrap</h5>
                                     <p>
-                                        Molestiae vel eos atque alias recusandae citationem ad mollitia tecto possimus.
+                                        Using this web framework that focuses on simplifying the development of web pages, I can 
+                                        reduce encoding time.
                                     </p>
                                 </div>
                             </div>
@@ -277,11 +288,10 @@
                     <div class="row work-items">
                         <div class="col-12 col-md-6">
                             <div class="work">
-                                <img src="./img/proj1.jpg" alt="" class="img-fluid">
+                                <img src="./img/myko.png" alt="Myko Minions site image" title="Myko Minions project" class="img-fluid">
                                 <div class="work-info">
                                     <h5 title="Myko Minions">Myko Minions</h5>
-                                    <p>06 Jul 2018</p>
-
+                                    <p>July 2018</p>
                                     <a href="#" class="popup-link myko">
                                        <i class="fas fa-expand"></i>
                                     </a>
@@ -290,11 +300,10 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="work">
-                                <img src="./img/proj2.jpg" alt="" class="img-fluid">
+                                <img src="./img/english.png" alt="English Department site image" title="English Department project" class="img-fluid">
                                 <div class="work-info">
-                                    <h5 title="English Department">Myko Minions</h5>
-                                    <p>06 Jul 2018</p>
-
+                                    <h5 title="English Department">English Department</h5>
+                                    <p>January 2018</p>
                                     <a href="#" class="popup-link  english">
                                         <i class="fas fa-expand"></i>
                                     </a>
@@ -302,7 +311,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12  text-center">
-                            <a href="#" class="button all-works-link revealer animated">
+                            <a href="https://github.com/jeka400" class="button all-works-link revealer animated" target="_blank">
                                 View all works
                             </a>
                         </div>
@@ -310,171 +319,180 @@
                 </div>
             </div>
         </div>
+
+
+
+        <!-- ====================================================     Work Popup Myko   ========================================================-->
+    <div class="work-popup popup-myko hidden">
+            <button title="Close" type="button" class="close-btn-popup close-myko">x</button>
+            <div class="popup-content">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-8">
+                            <div class="work-title">
+                                <h4>Myko Minions</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Link</h4>
+                                <p>
+                                    <a href="https://myko-minions.com/" target="_blank" >
+                                        <i class="fas fa-paperclip"></i>
+                                        View Project
+                                    </a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>About Project</h4>
+                                <p>
+                                    Myko Minions is delivery & courier service at Mykonos, 
+                                    that offers the possibility of ordering: food from restaurants, drinks, groceries,
+                                     cigarettes, special gifts for special occasions, courier 
+                                     service or anything that could come on your mind.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Technologies I used</h4>
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>html</h6>
+                                            <p>
+                                                <i class="fab fa-html5"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>css</h6>
+                                            <p>
+                                                <i class="fab fa-css3-alt"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>bootstrap</h6>
+                                            <p>
+                                                <span class="text-uppercase bootstrap-char">B</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>git</h6>
+                                            <p>
+                                                <i class="fas fa-code-branch"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+         <!-- ====================================================     Work Popup English   ========================================================-->
+         <div class="work-popup popup-english hidden">
+            <button title="Close" type="button" class="close-btn-popup close-english">x</button>
+            <div class="popup-content">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-md-8">
+                            <div class="work-title">
+                                <h4>English Department</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Link</h4>
+                                <p>
+                                    <a href="https://englishdepartment.co.uk/"  target="_blank">
+                                        <i class="fas fa-paperclip"></i>
+                                        View Project
+                                    </a> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>About Project</h4>
+                                <p>
+                                    English Departmant is an online platform for English teachers to share
+                                     their thoughts, resources, ideas and jobs posts, all for free.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="work-details-popup">
+                                <h4>Technologies I used</h4>
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>html</h6>
+                                            <p>
+                                                <i class="fab fa-html5"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>css</h6>
+                                            <p>
+                                                <i class="fab fa-css3-alt"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>bootstrap</h6>
+                                            <p>
+                                                <span class="text-uppercase bootstrap-char">B</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="work-info-popup">
+                                            <h6>git</h6>
+                                            <p>
+                                                <i class="fas fa-code-branch"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- ====================================================     Work Popup Myko   ========================================================-->
-    <div class="work-popup popup-myko hidden">
-        <button title="Close" type="button" class="close-btn-popup close-myko">x</button>
-        <div class="popup-content">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8">
-                        <div class="work-title">
-                            <h4>Myko Minions</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center ">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Link</h4>
-                            <p>
-                                <i class="fas fa-paperclip"></i>
-                                View Project
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>About Project</h4>
-                            <p>
-                                Consectetur adipisicing elit. Placeat iusto ea, reiciendis harum debitis
-                                 rerum quia amet vel corporis dolor officia perferendis fuga voluptate.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Technologies I used</h4>
-                            <div class="row justify-content-center text-center">
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>html</h6>
-                                        <p>
-                                            <i class="fab fa-html5"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>css</h6>
-                                        <p>
-                                            <i class="fab fa-css3-alt"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>bootstrap</h6>
-                                        <p>
-                                            <span class="text-uppercase" id="bootstrap-char">B</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>git</h6>
-                                        <p>
-                                            <i class="fas fa-code-branch"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     <!-- ====================================================     Work Popup English   ========================================================-->
-     <div class="work-popup popup-english hidden">
-        <button title="Close" type="button" class="close-btn-popup close-english">x</button>
-        <div class="popup-content">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8">
-                        <div class="work-title">
-                            <h4>English Department</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center ">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Link</h4>
-                            <p>
-                                <i class="fas fa-paperclip"></i>
-                                View Project
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>About Project</h4>
-                            <p>
-                                Consectetur adipisicing elit. Placeat iusto ea, reiciendis harum debitis
-                                    rerum quia amet vel corporis dolor officia perferendis fuga voluptate.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <div class="work-details-popup">
-                            <h4>Technologies I used</h4>
-                            <div class="row justify-content-center text-center">
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>html</h6>
-                                        <p>
-                                            <i class="fab fa-html5"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>css</h6>
-                                        <p>
-                                            <i class="fab fa-css3-alt"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>bootstrap</h6>
-                                        <p>
-                                            <span class="text-uppercase" id="bootstrap-char">B</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="work-info-popup">
-                                        <h6>git</h6>
-                                        <p>
-                                            <i class="fas fa-code-branch"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- ====================================================     Cv            ========================================================-->
      <section id="cv" class="panel" data-section-name="cv">
-        <div class="wrapper"></div>
         <div class="wrapper"></div>
         <div class="container">
             <div class="row text-center justify-content-center">
@@ -486,7 +504,7 @@
             </div>
             <div class="row text-center justify-content-center">
                 <div class="col-lg-10 revealer animated">
-                    <a href="#" title="Download My CV" class="button all-works-link">
+                    <a href="./Jelena-Krstic-CV.pdf" title="Download My CV" class="button all-works-link" target="_blank" download="">
                             <i class="fas fa-download"></i>
                         CV
                     </a>
@@ -517,31 +535,35 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7">
-                    <form id="contact-form" action="#">
-                        <div class="row hidden">
+                    <div class=" row form-successsful-message hidden">
+                        <div class="col-12">
+                            <p>Your message has been successfully sent!</p>
+                        </div>
+                    </div>
+
+
+                    <form id="contact-form"  action="#" method="get" autocomplete="on">
+                        <div class="row form-message hidden">
                             <div class="col">
-                                <p class="form-message error">
+                                <p class="error text-left">
                                     Please complete the form and try again.
                                 </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-5">
-                                <input class="input-field input-not-empty required" type="text" name="name" placeholder="Name">
-                                <input class="input-field input-is-empty required" type="text" name="name" placeholder="Field is Required!">
-                                <input class="input-field input-not-empty required" type="email" name="email" placeholder="Email">
-                                <input class="input-field input-is-empty required" type="email" name="email" placeholder="Field is Required!">
+                                <input type="text" name="name" placeholder="Name" required class="input-field" >
+                                <input type="email" name="email" placeholder="Email" required class="input-field" >
                             </div>
                             <div class="col-md-7">
-                                <textarea class="input-field input-not-empty required" type="text" name="email" placeholder="Message"></textarea>
-                                <textarea class="input-field input-is-empty required" type="text" name="email" placeholder="Field is Required!"></textarea>
+                                <textarea name="message" placeholder="Message" required class="input-field"></textarea>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-10 revealer animated">
-                                <a href="#" title="Download My CV" class="button all-works-link message-btn">
-                                      send message
-                                </a>
+                        <div class="row message-row">
+                            <div class="col revealer animated">
+                                <button title="Send message" class="button all-works-link message-btn" type="submit" id="submit-form">
+                                    send message
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -560,28 +582,28 @@
                 <div class="col-12">
                     <ul class="social">
                         <li class="si-1">
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/jelena-krstic164/" target="_blank">
                                 <span class="social-linkedin">
                                     <i class="fab fa-linkedin-in"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="si-2">
-                            <a href="#">
+                            <a href="https://www.facebook.com/jelena.krstic.164" target="_blank">
                                 <span class="social-facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="si-3">
-                            <a href="#">
+                            <a href="https://www.instagram.com/jeka_krstic/?hl=en" target="_blank">
                                 <span class="social-instagram">
                                     <i class="fab fa-instagram"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="si-4">
-                            <a href="#">
+                            <a href="https://github.com/jeka400" target="_blank">
                                 <span class="social-github">
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -599,25 +621,11 @@
     </footer>
 
 
-    <!-- ====================================================     Page Loader         ========================================================-->
-    <section id="preloader" class="wrapper dark pageloader hidden">
-        <div class="spinner">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-        </div>
-    </section>
-
-
     <!-- ====================================================     Scripts         ======================================================-->
     
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1.0.17/jquery.scrollify.min.js"></script>
     

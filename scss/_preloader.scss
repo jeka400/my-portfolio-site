@@ -1,0 +1,51 @@
+.pageloader.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $third-color;
+    z-index: 1000;
+    display: grid;
+    align-items: center;
+}
+
+#preloader {
+    z-index: 1000;
+    display: grid;
+    align-items: center;
+    background: $third-color;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.preloader-bar {
+    position: relative;
+    height: 2px;
+    width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 150px;
+}
+
+.circle {
+    position: absolute;
+    top: -30px;
+    margin-left: -30px;
+    height: 60px;
+    width: 60px;
+    left: 0;
+    background: #fff;
+    border-radius: 30%;
+}
+  
+.preloader-bar {
+    & > p {
+        position: absolute;
+        top: -25px;
+        right: -85px;
+        text-transform: uppercase;
+        color: $third-color;
+        font-family: helvetica, sans-serif;
+        font-weight: bold;
+    }
+}
