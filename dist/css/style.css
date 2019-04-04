@@ -7061,7 +7061,7 @@ a:hover {
   outline: 0; }
   a:hover:not(.popup-link) {
     background-color: transparent; }
-  a:hover:not(a.nav-link) {
+  a:hover:not(.nav-link) {
     border: 1px solid white; }
 
 a:active:not(.top-link) {
