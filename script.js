@@ -127,12 +127,21 @@ $(document).ready(function() {
     });
 
     // ================================================      Popup       ===========================================================
+    $(".popup-link").on("click", function(e){
+      e.preventDefault();
+      $(this).removeClass("animate-popup-close");
+      $(this).addClass("animate-popup");
+    });
+
+    $(".close-btn-popup").on("click", function(e) {
+      e.preventDefault();
+      $(".work-popup").addClass("hidden");
+    });
+    
     // =======================  Myko Minions
 
     $(".myko").on("click", function(e){
         e.preventDefault();
-        $(".myko").removeClass("animate-popup-close");
-        $(".myko").addClass("animate-popup");
         setTimeout(function() 
             {
                 $(".popup-myko").removeClass("hidden");
@@ -143,7 +152,6 @@ $(document).ready(function() {
 
     $(".close-btn-popup").on("click", function(e) {
         e.preventDefault();
-        $(".popup-myko").addClass("hidden");
         setTimeout(
             function() 
             {
@@ -160,8 +168,6 @@ $(document).ready(function() {
     // =======================  English Teacher
     $(".english").on("click", function(e){
         e.preventDefault();
-        $(".english").removeClass("animate-popup-close");
-        $(".english").addClass("animate-popup");
         setTimeout(function() 
             {
                 $(".popup-english").removeClass("hidden");
@@ -172,7 +178,6 @@ $(document).ready(function() {
 
     $(".close-btn-popup").on("click", function(e) {
         e.preventDefault();
-        $(".popup-english").addClass("hidden");
         setTimeout(
             function() 
             {
