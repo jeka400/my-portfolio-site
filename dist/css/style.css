@@ -7058,10 +7058,11 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
   color: white;
-  border: 1px solid white;
   outline: 0; }
   a:hover:not(.popup-link) {
     background-color: transparent; }
+  a:hover:not(a.nav-link) {
+    border: 1px solid white; }
 
 a:active:not(.top-link) {
   text-decoration: none;

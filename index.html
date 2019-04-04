@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Jelena Krstic">
-    <meta name="keywords" content="html, html5, css3, css, web, website, site, jelena krstic,
-                                     git, sass, scss, bootstrap, frontend, developer, portfolio, 
+    <meta name="keywords" content="jelena krstic, jelena, front-end, developer, frontend, html, html5, css3, css, web, website, site, freelance,
+                                     git, sass, scss, bootstrap, portfolio, 
                                      javascript, jquery">
     <meta name="description" content="The home page of Jelena Krstic, frontend developer.">
 
@@ -40,12 +40,20 @@
     
     <!-- <link rel="stylesheet" href="animations.css"> -->
     
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137609232-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137609232-1');
+    </script>
   </head>
   <body>
     <!-- ====================================================     Page Loader         ========================================================-->
     <section class="pageloader wrapper">
-        <div id="preloader" class="preloader  dark">
+        <div id="preloader" class="preloader dark">
             <div class="preloader-bar">
                 <div class="circle"></div>
                 <p>Welcome!</p>
@@ -71,7 +79,7 @@
                 <button title="Close" type="button" class=" close-btn close-btn-popup">x</button>
 
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#intro">Home</a>
                     </li>
                     <li class="nav-item">
@@ -544,11 +552,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-5">
-                                <input type="text" name="name" placeholder="Name" required class="input-field input-not-empty" >
-                                <input type="email" name="email" placeholder="Email" required class="input-field input-not-empty" >
+                                <input type="text" name="name" placeholder="Name" required class="input-field" >
+                                <input type="email" name="email" placeholder="Email" required class="input-field" >
                             </div>
                             <div class="col-md-7">
-                                <textarea name="message" placeholder="Message" required class="input-field input-not-empty"></textarea>
+                                <textarea name="message" placeholder="Message" required class="input-field"></textarea>
                             </div>
                         </div>
                         <div class="row message-row">

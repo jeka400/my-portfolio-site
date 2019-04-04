@@ -5,8 +5,6 @@ $(window).on('load', function() { // makes sure the whole site is loaded
 })
 
 
-
-
 $(document).ready(function() {
 
   // ================================================      Form Submition       ===========================================================
@@ -18,13 +16,16 @@ $(document).ready(function() {
 
     var formIsValid = true;
 
+    $('.input-field').removeClass("input-is-empty");
+    $('.form-message').addClass('hidden');
+
     $('.input-field').each(function() {
-      console.log($(this).val());
-      if ( $(this).val() === "" ) {     
+      
+
+      if ($(this).val() === "") {     
         formIsValid = false;
-        console.log("this mi je ovde: " + this);
         $(this).addClass('input-is-empty');
-        $('.form-message').removeClass('hidden');
+        
       }
     });
 
@@ -33,20 +34,15 @@ $(document).ready(function() {
         url: url,
         method: "GET",
         dataType: "json",
-        data: $form.serialize()
-      }).success(
-        $('form').addClass('hidden'),
-        $('.form-successsful-message').removeClass('hidden')
-      );
+        data: $form.serialize(),
+        success: function(data) {
+          $('form').addClass('hidden');
+          $('.form-successsful-message').removeClass('hidden')
+        }
+      });
     } else {
-        $('.form-message').removeClass('hidden');
-
-        $('.input-field').each(function() {
-          if( $(this).val() != "" ) { 
-            $(this).addClass('input-is-empty');
-          }
-        })
-      }
+      $('.form-message').removeClass('hidden');
+    }
     
   });
 
@@ -106,14 +102,12 @@ $(document).ready(function() {
     });
 
     $(".nav-link").on("click", function(e) {
-      $(".nav-item").removeClass("active");
-      $(this).parent().addClass("active");
-      setTimeout(
-          function() 
-          {
-            $(".collapse-list").addClass("hidden");
-          }, 200);
+      $(".collapse-list").addClass("hidden");
     });
+
+    $(".nav-item").hover(function(){
+      $(this).toggleClass("active");
+    })
 
     // ==========================================     Intro - Text effect       ======================================================
     $('.sectionOneAnimation').each(function(){

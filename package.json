@@ -8,7 +8,8 @@
     "gulp-sass": "^4.0.2",
     "jquery": "^3.3.1",
     "jquery-scrollify": "^1.0.19",
-    "stylelint": "^9.10.1"
+    "stylelint": "^9.10.1",
+    "withinviewport": "^2.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
