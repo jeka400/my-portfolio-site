@@ -1,11 +1,65 @@
-h1, h2, h3, h4, h5, h6, span, p, ul, li, input, textarea {
+%font-style {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 170%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+%headings-style {
     font-weight: 500;
     line-height: 1.2;
+}
+
+h1 {
+    @extend %font-style;
+    @extend %headings-style;
+}
+
+h2 {
+    @extend %font-style;
+    @extend %headings-style;
+}
+
+h3 {
+    @extend %font-style;
+    @extend %headings-style;
+}
+
+h4 {
+    @extend %font-style;
+    @extend %headings-style;
+}
+
+h5 {
+    @extend %font-style;
+    @extend %headings-style;
+}
+
+h6 {
+    @extend %font-style;
+    @extend %headings-style;
+}
+
+span {
+    @extend %font-style;
+}
+
+p {
+    @extend %font-style;
+}
+
+ul {
+    @extend %font-style;
+}
+
+li {
+    @extend %font-style;
+}
+
+input {
+    @extend %font-style;
+}
+
+textarea {
+    @extend %font-style;
 }

@@ -1,30 +1,64 @@
 /*  ===========================================     Preloader           =========================================================   */
-.circle {
-    animation-name: move;
-    animation-duration: 1.3s;
-    animation-iteration-count: infinite;
+@mixin animation($property) {
+    -moz-animation: ($property);
+    -o-animation: ($property);
+    -webkit-animation: ($property);
+    animation: ($property);
+}
+
+@mixin circle-animation {
     -moz-animation: move 1.3s infinite;
     -o-animation: move 1.3s infinite;
     -webkit-animation: move 1.3s infinite;
+    animation: move 1.3s infinite;
+}
+
+@mixin transform($property) {
+    -moz-transform: $property;
+    -o-transform: $property;
+    -webkit-transform: $property;
+    transform: $property;
+}
+
+.circle {
+   @include circle-animation;
 }
 @keyframes move {
     0% {left: 0;}
-    50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
-    75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    50% {
+        left: 100%;
+        @include transform(rotate(450deg));
+        width: 150px; 
+        height: 150px;
+    }
+    75% {
+        left: 100%; 
+        @include transform(rotate(450deg));
+        width: 150px; 
+        height: 150px;
+    }
     100% {right: 100%;}
 }
 @-webkit-keyframes move {
     0% {left: 0;}
-    50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
-    75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+    50% {
+        left: 100%; 
+        @include transform(rotate(450deg)); 
+        width: 150px; 
+        height: 150px;
+    }
+    75% {
+        left: 100%; 
+        @include transform(rotate(450deg)); 
+        width: 150px; 
+        height: 150px;
+    }
     100% {right: 100%;}
 } 
 
 /*  ===========================================     Nav animation       =========================================================   */
 .animate-nav {
-    animation-name: animate1;
-    animation-duration: .3s;
-    animation-timing-function: ease;
+    @include animation(animate1 .3s ease);
 }
 @keyframes animate1 {
     0% {
@@ -35,11 +69,17 @@
     }
 }
 .animate-nav-close {
-    animation-name: animate2;
-    animation-duration: .3s;
-    animation-timing-function: ease;
+    @include animation(navAnimate2 .3s ease);
 }
-@keyframes animate2 {
+@-webkit-keyframes navAnimate2 {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 20px;
+    }
+}
+@keyframes navAnimate2 {
     0% {
         width: 100%;
     }
@@ -60,13 +100,22 @@
     color: black !important;
 
     position: relative;
-    animation-name: popup-aminate;
-    animation-duration: .5s;
-    animation-timing-function: ease;
+    @include animation(popup-aminate .5s ease);
 }
 .animate-popup > i {
     z-index: 10;
     color: black;
+}
+@-webkit-keyframes popup-aminate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 70%
+    }
+    100% {
+        width: 100%;
+    }
 }
 @keyframes popup-aminate {
     0% {
@@ -89,10 +138,18 @@
     height: 100%;
     background-color: white;
     color: black !important;
-
-    animation-name: animate2;
-    animation-duration: .5s;
-    animation-timing-function: ease;
+    @include animation(animate2 .5s ease);
+}
+@-webkit-keyframes animate2 {
+    0% {
+        width: 100%;
+    }
+    50% {
+        width: 50%
+    }
+    100% {
+        width: 0;
+    }
 }
 @keyframes animate2 {
     0% {
@@ -108,10 +165,16 @@
 
 /* ==========================================      Social icons in nav        ======================================================     */
 .animate-3 {
-    animation-name: animate3;
-    animation-duration: 1s;
+    @include animation(animate3 .1s ease);
     position: relative;
-    animation-timing-function: ease;
+}
+@-webkit-keyframes animate3 {
+    0% {
+        top: 20px;
+    }
+    100% {
+        top: 0;
+    }
 }
 @keyframes animate3 {
     0% {
@@ -123,10 +186,16 @@
 }
 
 .animate-4 {
-    animation-name: animate4;
-    animation-duration: 1.5s;
+    @include animation(animate4 1.5s ease);
     position: relative;
-    animation-timing-function: ease;
+}
+@-webkit-keyframes animate4 {
+    0% {
+        top: 25px;
+    }
+    100% {
+        top: 0;
+    }
 }
 @keyframes animate4 {
     0% {
@@ -138,10 +207,17 @@
 }
 
 .animate-5 {
-    animation-name: animate5;
-    animation-duration: 2s;
+    @include animation(animate5 2s ease);
     position: relative;
-    animation-timing-function: ease;
+}
+@-webkit-keyframes animate5 {
+    0% {
+        top: 30px;
+    }
+  
+    100% {
+        top: 0;
+    }
 }
 @keyframes animate5 {
     0% {
@@ -154,10 +230,17 @@
 }
 
 .animate-6 {
-    animation-name: animate6;
-    animation-duration: 2s;
+    @include animation(animate6 2s ease);
     position: relative;
-    animation-timing-function: ease;
+}
+@-webkit-keyframes animate6 {
+    0% {
+        top: 35px;
+    }
+  
+    100% {
+        top: 0;
+    }
 }
 @keyframes animate6 {
     0% {
@@ -171,10 +254,19 @@
 
 /* ==========================================      Div Text in Intro        =====================================================    */
 .animate-7 {
-    animation-name: animate7;
-    animation-duration: 1s;
+    @include animation(animate7 1s ease-in);
     position: relative;
-    animation-timing-function: ease-in;
+}
+@-webkit-keyframes animate7 {
+    0% {
+        top: 100px;
+        opacity: 0.05;
+        filter: alpha(opacity=5);
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
 @keyframes animate7 {
     0% {
@@ -190,27 +282,33 @@
 
 
 .animate-8 {
-    animation-name: animate8;
-    animation-duration: .5s;
+    @include animation(animate8 .5s both);
     position: relative;
-    /* animation-timing-function: ease; */
-    animation-fill-mode: both;
 }
-@keyframes animate8 {
+@-webkit-keyframes animate8 {
     from {
         opacity: 0;
         visibility: hidden;
-        /*-webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);*/
-        -webkit-transform: translate3d(0, 40px, 0);
-        transform: translate3d(0, 40px, 0);
+        @include transform(translate3d(0, 40px, 0));
       }
     
       to {
         opacity: 1;
         visibility: visible;
-        -webkit-transform: none;
-        transform: none;
+        @include transform(none);
+      }
+}
+@keyframes animate8 {
+    from {
+        opacity: 0;
+        visibility: hidden;
+        @include transform(translate3d(0, 40px, 0));
+      }
+    
+      to {
+        opacity: 1;
+        visibility: visible;
+        @include transform(none);
       }
 }
 
@@ -220,60 +318,52 @@
 }
 
 .jump {
-    -webkit-animation: jump 1.5s ease 0s infinite normal ;
-    animation: jump 1.5s ease 0s infinite normal ;
-  }
-  @-webkit-keyframes jump {
+    @include animation(jump 1.5s ease 0s infinite normal);
+}
+@-webkit-keyframes jump {
     0%{
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     20%{
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     40%{
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
+        @include transform(translateY(-30px));
     }
     50%{
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     60%{
-      -webkit-transform: translateY(-15px);
-      transform: translateY(-15px);
+        @include transform(translateY(-15px));
     }
     80%{
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     100%{
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
-  }
-  
-  @keyframes jump {
+}
+
+@keyframes jump {
     0%{
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     20%{
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     40%{
-      transform: translateY(-30px);
+        @include transform(translateY(-30px));
     }
     50%{
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     60%{
-      transform: translateY(-15px);
+        @include transform(translateY(-15px));
     }
     80%{
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
     100%{
-      transform: translateY(0);
+        @include transform(translateY(0));
     }
-  }
+}

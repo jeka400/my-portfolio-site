@@ -7083,24 +7083,28 @@ h1, h2, h3, h4, h5, h6 {
 
 /*  ===========================================     Preloader           =========================================================   */
 .circle {
-  animation-name: move;
-  animation-duration: 1.3s;
-  animation-iteration-count: infinite;
   -moz-animation: move 1.3s infinite;
   -o-animation: move 1.3s infinite;
-  -webkit-animation: move 1.3s infinite; }
+  -webkit-animation: move 1.3s infinite;
+  animation: move 1.3s infinite; }
 
 @keyframes move {
   0% {
     left: 0; }
   50% {
     left: 100%;
+    -moz-transform: rotate(450deg);
+    -o-transform: rotate(450deg);
     -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
     width: 150px;
     height: 150px; }
   75% {
     left: 100%;
+    -moz-transform: rotate(450deg);
+    -o-transform: rotate(450deg);
     -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
     width: 150px;
     height: 150px; }
   100% {
@@ -7111,12 +7115,18 @@ h1, h2, h3, h4, h5, h6 {
     left: 0; }
   50% {
     left: 100%;
+    -moz-transform: rotate(450deg);
+    -o-transform: rotate(450deg);
     -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
     width: 150px;
     height: 150px; }
   75% {
     left: 100%;
+    -moz-transform: rotate(450deg);
+    -o-transform: rotate(450deg);
     -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
     width: 150px;
     height: 150px; }
   100% {
@@ -7124,9 +7134,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /*  ===========================================     Nav animation       =========================================================   */
 .animate-nav {
-  animation-name: animate1;
-  animation-duration: .3s;
-  animation-timing-function: ease; }
+  -moz-animation: animate1 0.3s ease;
+  -o-animation: animate1 0.3s ease;
+  -webkit-animation: animate1 0.3s ease;
+  animation: animate1 0.3s ease; }
 
 @keyframes animate1 {
   0% {
@@ -7135,11 +7146,18 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%; } }
 
 .animate-nav-close {
-  animation-name: animate2;
-  animation-duration: .3s;
-  animation-timing-function: ease; }
+  -moz-animation: navAnimate2 0.3s ease;
+  -o-animation: navAnimate2 0.3s ease;
+  -webkit-animation: navAnimate2 0.3s ease;
+  animation: navAnimate2 0.3s ease; }
 
-@keyframes animate2 {
+@-webkit-keyframes navAnimate2 {
+  0% {
+    width: 100%; }
+  100% {
+    width: 20px; } }
+
+@keyframes navAnimate2 {
   0% {
     width: 100%; }
   100% {
@@ -7156,13 +7174,22 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
   color: black !important;
   position: relative;
-  animation-name: popup-aminate;
-  animation-duration: .5s;
-  animation-timing-function: ease; }
+  -moz-animation: popup-aminate 0.5s ease;
+  -o-animation: popup-aminate 0.5s ease;
+  -webkit-animation: popup-aminate 0.5s ease;
+  animation: popup-aminate 0.5s ease; }
 
 .animate-popup > i {
   z-index: 10;
   color: black; }
+
+@-webkit-keyframes popup-aminate {
+  0% {
+    width: 0; }
+  50% {
+    width: 70%; }
+  100% {
+    width: 100%; } }
 
 @keyframes popup-aminate {
   0% {
@@ -7181,9 +7208,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background-color: white;
   color: black !important;
-  animation-name: animate2;
-  animation-duration: .5s;
-  animation-timing-function: ease; }
+  -moz-animation: animate2 0.5s ease;
+  -o-animation: animate2 0.5s ease;
+  -webkit-animation: animate2 0.5s ease;
+  animation: animate2 0.5s ease; }
+
+@-webkit-keyframes animate2 {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 0; } }
 
 @keyframes animate2 {
   0% {
@@ -7195,10 +7231,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ==========================================      Social icons in nav        ======================================================     */
 .animate-3 {
-  animation-name: animate3;
-  animation-duration: 1s;
-  position: relative;
-  animation-timing-function: ease; }
+  -moz-animation: animate3 0.1s ease;
+  -o-animation: animate3 0.1s ease;
+  -webkit-animation: animate3 0.1s ease;
+  animation: animate3 0.1s ease;
+  position: relative; }
+
+@-webkit-keyframes animate3 {
+  0% {
+    top: 20px; }
+  100% {
+    top: 0; } }
 
 @keyframes animate3 {
   0% {
@@ -7207,10 +7250,17 @@ h1, h2, h3, h4, h5, h6 {
     top: 0; } }
 
 .animate-4 {
-  animation-name: animate4;
-  animation-duration: 1.5s;
-  position: relative;
-  animation-timing-function: ease; }
+  -moz-animation: animate4 1.5s ease;
+  -o-animation: animate4 1.5s ease;
+  -webkit-animation: animate4 1.5s ease;
+  animation: animate4 1.5s ease;
+  position: relative; }
+
+@-webkit-keyframes animate4 {
+  0% {
+    top: 25px; }
+  100% {
+    top: 0; } }
 
 @keyframes animate4 {
   0% {
@@ -7219,10 +7269,17 @@ h1, h2, h3, h4, h5, h6 {
     top: 0; } }
 
 .animate-5 {
-  animation-name: animate5;
-  animation-duration: 2s;
-  position: relative;
-  animation-timing-function: ease; }
+  -moz-animation: animate5 2s ease;
+  -o-animation: animate5 2s ease;
+  -webkit-animation: animate5 2s ease;
+  animation: animate5 2s ease;
+  position: relative; }
+
+@-webkit-keyframes animate5 {
+  0% {
+    top: 30px; }
+  100% {
+    top: 0; } }
 
 @keyframes animate5 {
   0% {
@@ -7231,10 +7288,17 @@ h1, h2, h3, h4, h5, h6 {
     top: 0; } }
 
 .animate-6 {
-  animation-name: animate6;
-  animation-duration: 2s;
-  position: relative;
-  animation-timing-function: ease; }
+  -moz-animation: animate6 2s ease;
+  -o-animation: animate6 2s ease;
+  -webkit-animation: animate6 2s ease;
+  animation: animate6 2s ease;
+  position: relative; }
+
+@-webkit-keyframes animate6 {
+  0% {
+    top: 35px; }
+  100% {
+    top: 0; } }
 
 @keyframes animate6 {
   0% {
@@ -7244,10 +7308,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ==========================================      Div Text in Intro        =====================================================    */
 .animate-7 {
-  animation-name: animate7;
-  animation-duration: 1s;
-  position: relative;
-  animation-timing-function: ease-in; }
+  -moz-animation: animate7 1s ease-in;
+  -o-animation: animate7 1s ease-in;
+  -webkit-animation: animate7 1s ease-in;
+  animation: animate7 1s ease-in;
+  position: relative; }
+
+@-webkit-keyframes animate7 {
+  0% {
+    top: 100px;
+    opacity: 0.05;
+    filter: alpha(opacity=5); }
+  100% {
+    top: 0;
+    opacity: 1; } }
 
 @keyframes animate7 {
   0% {
@@ -7259,23 +7333,41 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1; } }
 
 .animate-8 {
-  animation-name: animate8;
-  animation-duration: .5s;
-  position: relative;
-  /* animation-timing-function: ease; */
-  animation-fill-mode: both; }
+  -moz-animation: animate8 0.5s both;
+  -o-animation: animate8 0.5s both;
+  -webkit-animation: animate8 0.5s both;
+  animation: animate8 0.5s both;
+  position: relative; }
 
-@keyframes animate8 {
+@-webkit-keyframes animate8 {
   from {
     opacity: 0;
     visibility: hidden;
-    /*-webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0);*/
+    -moz-transform: translate3d(0, 40px, 0);
+    -o-transform: translate3d(0, 40px, 0);
     -webkit-transform: translate3d(0, 40px, 0);
     transform: translate3d(0, 40px, 0); }
   to {
     opacity: 1;
     visibility: visible;
+    -moz-transform: none;
+    -o-transform: none;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes animate8 {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    -moz-transform: translate3d(0, 40px, 0);
+    -o-transform: translate3d(0, 40px, 0);
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0); }
+  to {
+    opacity: 1;
+    visibility: visible;
+    -moz-transform: none;
+    -o-transform: none;
     -webkit-transform: none;
     transform: none; } }
 
@@ -7285,46 +7377,83 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden; }
 
 .jump {
+  -moz-animation: jump 1.5s ease 0s infinite normal;
+  -o-animation: jump 1.5s ease 0s infinite normal;
   -webkit-animation: jump 1.5s ease 0s infinite normal;
   animation: jump 1.5s ease 0s infinite normal; }
 
 @-webkit-keyframes jump {
   0% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   20% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   40% {
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px); }
   50% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   60% {
+    -moz-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px); }
   80% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   100% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
 @keyframes jump {
   0% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   20% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   40% {
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
     transform: translateY(-30px); }
   50% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   60% {
+    -moz-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
     transform: translateY(-15px); }
   80% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
     transform: translateY(0); }
   100% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
 /**
@@ -7490,8 +7619,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.7); }
 
-.intro-text > .row,
-.intro-text > .row {
+.intro-text, .intro-text > .row {
   height: 100%;
   position: relative; }
 

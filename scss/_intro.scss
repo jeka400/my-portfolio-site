@@ -19,11 +19,18 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.intro-text ,
+%full-height {
+    height: 100%;
+    position: relative;
+}
+
+.intro-text {
+    @extend %full-height;
+}
+
 .intro-text {
     > .row {
-        height: 100%;
-        position: relative;
+        @extend %full-height;
     }
 }
 
